@@ -13,7 +13,7 @@ var proxiedFetch = require('proxied-fetch');
 import proxiedFetch from ('proxied-fetch');
 
 // Browser
-window.proxedFetch('http://your-end-point.com')
+window.proxiedFetch('http://your-end-point.com')
 ```
 
 ### Using

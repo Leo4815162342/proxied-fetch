@@ -7,7 +7,7 @@ export default {
     {
         file: `${path.resolve(__dirname)}/dist/bundle.umd.js`,
         format: 'umd',
-        name: 'proxedFetch'
+        name: 'proxiedFetch'
     },
     {
         file: `${path.resolve(__dirname)}/dist/bundle.es.js`,
