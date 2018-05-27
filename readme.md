@@ -5,6 +5,14 @@ Bypass CORS limitations by simply proxy-ing requests
 
 ### Installation
 
+```bash
+
+npm install proxied-fetch
+
+```
+
+### Using
+
 ```javascript
 
 // CommonJS (NODE)
@@ -15,14 +23,6 @@ import proxiedFetch from ('proxied-fetch');
 
 // Browser
 window.proxiedFetch('http://your-end-point.com')
-
-```
-
-### Using
-
-Just use it in the same way as `fetch` API
-
-```javascript
 
 proxiedFetch('http://your-end-point.com')
     .then(res => res.json)
