@@ -12,7 +12,7 @@ Struggle no more, and make CORS-free requests to any page/endpoint from any doma
 
 ```bash
 
-npm install proxied-fetch
+$ npm install proxied-fetch
 
 ```
 
