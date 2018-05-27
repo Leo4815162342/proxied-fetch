@@ -11,7 +11,7 @@ npm install proxied-fetch
 
 ```
 
-### Using
+### Require/import
 
 ```javascript
 
@@ -23,6 +23,15 @@ import proxiedFetch from ('proxied-fetch');
 
 // Browser
 window.proxiedFetch('http://your-end-point.com')
+
+
+```
+
+### Using
+
+Use in the same way as `fetch` API
+
+```javascript
 
 proxiedFetch('http://your-end-point.com')
     .then(res => res.json)
