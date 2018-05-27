@@ -20,15 +20,17 @@ npm install proxied-fetch
 
 ```javascript
 
-// CommonJS (NODE)
-var proxiedFetch = require('proxied-fetch');
-
 // ES6 Modules
 import proxiedFetch from ('proxied-fetch');
 
 // Browser
 window.proxiedFetch('http://your-end-point.com')
 
+// CommonJS (NODE)
+var proxiedFetch = require('proxied-fetch');
+
+// AMD
+require(['proxied-fetch'], function(proxiedFetch){  });
 
 ```
 
