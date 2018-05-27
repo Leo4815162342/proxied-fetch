@@ -6,9 +6,9 @@ Tired of seeing these error messages after requesting content from different dom
 
 `Failed to load http://your-end-point.com: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://different-domain.com' is therefore not allowed access. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.`
 
-Struggle no more, and make CORS free requests to any page/endpoint from any domain with `Proxied Fetch` package.
+Struggle no more, and make CORS-free requests to any page/endpoint from any domain with `Proxied Fetch` package.
 
-### Installation
+### Install
 
 ```bash
 
@@ -32,7 +32,7 @@ window.proxiedFetch('http://your-end-point.com')
 
 ```
 
-### Using
+### Use
 
 Use in the same way as `fetch` API
 
