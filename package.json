@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/Leo4815162342/proxied-fetch"
   },
+  "keywords": ["fetch", "cors", "bypass cors", "proxy", "fetch proxy", "cors proxy"],
   "author": "leonid.pyrlia",
   "license": "ISC",
   "devDependencies": {
