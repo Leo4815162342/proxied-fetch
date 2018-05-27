@@ -1,12 +1,19 @@
 {
   "name": "proxied-fetch",
   "version": "1.0.0",
-  "description": "Bypass cors by proxy-ing your requests",
+  "description": "A tiny wrapper of fetch API that bypasses CORS limitations by making requests through proxies",
   "main": "dist/bundle.umd.js",
   "module": "dist/bundle.es.js",
   "scripts": {
     "build": "rollup -c"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leo4815162342/proxied-fetch"
+  },
+  "author": "leonid.pyrlia",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^0.59.3"
+  }
 }
