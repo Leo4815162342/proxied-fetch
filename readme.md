@@ -36,12 +36,12 @@ require(['proxied-fetch'], function(proxiedFetch){  });
 
 ### Use
 
-Use in the same way as `fetch` API
+Use in the same way as `fetch` API. A `Promise` will be returned.
 
 ```javascript
 
 proxiedFetch('http://your-end-point.com')
-    .then(res => res.json)
+    .then(res => res.json())
     .then(data => console.log(data))
 
 ```
