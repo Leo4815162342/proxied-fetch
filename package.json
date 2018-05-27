@@ -1,0 +1,12 @@
+{
+  "name": "proxied-fetch",
+  "version": "1.0.0",
+  "description": "Bypass cors by proxy-ing your requests",
+  "main": "dist/bundle.umd.js",
+  "module": "dist/bundle.es.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC"
+}
