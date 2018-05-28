@@ -17,10 +17,10 @@
             url: 'https://cors-anywhere.herokuapp.com/',
             setHeaders: true
         },
-        {
-            url: 'https://cors.now.sh/',
-            setHeaders: false
-        }
+        // {
+        //     url: 'https://cors.now.sh/',
+        //     setHeaders: false
+        // }
     ];
 
 
@@ -29,8 +29,7 @@
         const requestData = {
             headers: {
                 'X-Requested-With': 'XMLHttpRequest'
-            },
-            method: 'POST'
+            }
         };
 
         const requestPromises = proxyList.map(({url, setHeaders}) => fetch(`${url}${requestUrl}`, setHeaders ? requestData : null ));
