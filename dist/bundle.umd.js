@@ -7,34 +7,33 @@
     const proxies = [
         {
             url: 'https://cors.io/?',
-            useOrigin: false
+            setHeaders: false
         },
-        {
-            url: 'https://thingproxy.freeboard.io/fetch/',
-            useOrigin: false
-        },
+        // {
+        //     url: 'https://thingproxy.freeboard.io/fetch/',
+        //     setHeaders: false
+        // },
         {
             url: 'https://cors-anywhere.herokuapp.com/',
-            useOrigin: true
+            setHeaders: true
         },
         {
             url: 'https://cors.now.sh/',
-            useOrigin: false
+            setHeaders: false
         }
     ];
 
 
     function proxiedFetch(requestUrl, proxyList = proxies) {
         
-        const { origin } = new URL(requestUrl);
-        const headersData = {
+        const requestData = {
             headers: {
-                origin,
-                method: 'POST'
-            }
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            method: 'POST'
         };
 
-        const requestPromises = proxyList.map(({url, useOrigin}) => fetch(`${url}${requestUrl}`, useOrigin ? headersData : null ));
+        const requestPromises = proxyList.map(({url, setHeaders}) => fetch(`${url}${requestUrl}`, setHeaders ? requestData : null ));
 
         return Promise.race(requestPromises);
 
