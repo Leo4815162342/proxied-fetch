@@ -1,6 +1,6 @@
 {
   "name": "proxied-fetch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A tiny wrapper of fetch API that bypasses CORS limitations by making requests through proxies",
   "main": "dist/bundle.umd.js",
   "module": "dist/bundle.es.js",

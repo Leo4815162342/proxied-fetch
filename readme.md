@@ -1,8 +1,8 @@
 # Proxied Fetch
 
-Bypass CORS limitations by simply proxy-ing requests
+The tiny Fetch API wrapper with 0 dependencies that lets you bypass CORS limitations by simply proxy-ing your requests through known CORS proxy services.
 
-Tired of seeing these error messages after requesting content from different domains?
+Tired of seeing these error messages after requesting content from domains with different origin?
 
 `Failed to load http://your-end-point.com: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://different-domain.com' is therefore not allowed access. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.`
 
