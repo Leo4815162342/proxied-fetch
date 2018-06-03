@@ -45,3 +45,11 @@ proxiedFetch('http://your-end-point.com')
     .then(data => console.log(data))
 
 ```
+
+### With fetch
+
+![ajax request with fetch API](https://raw.githubusercontent.com/Leo4815162342/proxied-fetch/master/fetch.gif)
+
+### With proxiedFetch
+
+![ajax request with proxiedFetch](https://raw.githubusercontent.com/Leo4815162342/proxied-fetch/master/proxiedFetch.gif)
