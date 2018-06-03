@@ -40,7 +40,7 @@ Use in the same way as `fetch` API. A `Promise` will be returned.
 
 ```javascript
 
-proxiedFetch('http://your-end-point.com')
+proxiedFetch('https://xkcd.com/info.0.json')
     .then(res => res.json())
     .then(data => console.log(data))
 
