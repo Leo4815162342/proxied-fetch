@@ -8,8 +8,6 @@ Tired of seeing these error messages after requesting content from domains with 
 
 Struggle no more, and make CORS-free requests to any page/endpoint from any domain with `Proxied Fetch` package.
 
-***
-
 ### Install
 
 Using NPM:
@@ -21,10 +19,8 @@ $ npm install proxied-fetch
 Via CDN:
 
 ```
-https://unpkg.com/proxied-fetch@1.0.5/dist/bundle.umd.js
+https://unpkg.com/proxied-fetch@1.0.6/dist/bundle.umd.js
 ```
-
-***
 
 ### Using in browser
 
@@ -38,7 +34,7 @@ Use in the same way as `fetch` API. A `Promise` will be returned.
     <meta charset="UTF-8">
 </head>
 <body>
-    <script src="https://unpkg.com/proxied-fetch@1.0.5/dist/bundle.umd.js"></script>
+    <script src="https://unpkg.com/proxied-fetch@1.0.6/dist/bundle.umd.js"></script>
     <script>
         proxiedFetch('https://xkcd.com/info.0.json')
             .then(res => res.json())
@@ -48,8 +44,6 @@ Use in the same way as `fetch` API. A `Promise` will be returned.
 </html>
 
 ```
-
-***
 
 ### Using with require/import for module systems (AMD/CommonJS/ES6)
 
@@ -66,13 +60,12 @@ require(['proxied-fetch'], function(proxiedFetch){  });
 
 ```
 
-***
-
 ### fetch vs proxiedFetch
-####  fetch
+
+#### fetch:
 
 ![ajax request with fetch API](https://raw.githubusercontent.com/Leo4815162342/proxied-fetch/master/fetch.gif)
 
-#### With proxiedFetch
+#### proxiedFetch:
 
 ![ajax request with proxiedFetch](https://raw.githubusercontent.com/Leo4815162342/proxied-fetch/master/proxiedFetch.gif)
