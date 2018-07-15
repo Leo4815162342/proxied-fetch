@@ -19,7 +19,7 @@ $ npm install proxied-fetch
 Via CDN:
 
 ```
-https://unpkg.com/proxied-fetch@1.0.7/dist/bundle.umd.js
+https://unpkg.com/proxied-fetch@latest/dist/bundle.umd.js
 ```
 
 ### Using in browser
