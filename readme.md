@@ -34,7 +34,7 @@ Use in the same way as `fetch` API. A `Promise` will be returned.
     <meta charset="UTF-8">
 </head>
 <body>
-    <script src="https://unpkg.com/proxied-fetch@1.0.7/dist/bundle.umd.js"></script>
+    <script src="https://unpkg.com/proxied-fetch@latest/dist/bundle.umd.js"></script>
     <script>
         proxiedFetch('https://xkcd.com/info.0.json')
             .then(res => res.json())
