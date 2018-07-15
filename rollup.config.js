@@ -8,10 +8,6 @@ export default {
         file: `${path.resolve(__dirname)}/dist/bundle.umd.js`,
         format: 'umd',
         name: 'proxiedFetch'
-    },
-    {
-        file: `${path.resolve(__dirname)}/dist/bundle.es.js`,
-        format: 'es',
     }
   ]
 }

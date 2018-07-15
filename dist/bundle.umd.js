@@ -4,7 +4,7 @@
     (global.proxiedFetch = factory());
 }(this, (function () { 'use strict';
 
-    const proxies = [
+    var proxies = [
         {
             url: 'https://cors.io/?',
             setHeaders: false
@@ -24,15 +24,18 @@
     ];
 
 
-    function proxiedFetch(requestUrl, proxyList = proxies) {
+    function proxiedFetch(requestUrl, proxyList) {
         
-        const requestData = {
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-            }
-        };
+        proxyList = proxyList || proxies;
 
-        const requestPromises = proxyList.map(({url, setHeaders}) => fetch(`${url}${requestUrl}`, setHeaders ? requestData : null ));
+        var requestPromises = proxyList.map(function(proxy) {
+
+            var proxyUrl = proxy.url,
+                setHeaders = proxy.setHeaders,
+                url = proxyUrl + requestUrl;
+
+            return fetch(url, setHeaders ? {headers: {'X-Requested-With': 'XMLHttpRequest'}} : null);
+        });
 
         return Promise.race(requestPromises);
 
