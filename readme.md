@@ -71,16 +71,16 @@ require(['proxied-fetch'], function(proxiedFetch){  });
 ![ajax request with proxiedFetch](https://raw.githubusercontent.com/Leo4815162342/proxied-fetch/master/proxiedFetch.gif)
 
 
-### providing custom Proxies
+### Using custom Proxies
 
-`proxiedFetch` accepts a list of custom proxies
+If you want to use your own proxies, `proxiedFetch` accepts a list of custom proxy urls as a second optional parameter:
 
 ```javascript
 
-var myProxies = ['']
+var myProxies = ['https://thingproxy.freeboard.io/fetch/', 'https://cors.io/?'];
 
-proxiedFetch('https://xkcd.com/info.0.json')
-            .then(res => res.json())
-            .then(data => console.log(data));
+proxiedFetch('https://xkcd.com/info.0.json', myProxies)
+    .then(res => res.json())
+    .then(data => console.log(data));
 
 ```
