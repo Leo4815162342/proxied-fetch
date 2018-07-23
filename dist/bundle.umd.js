@@ -5,22 +5,13 @@
 }(this, (function () { 'use strict';
 
     var proxies = [
-        {
-            url: 'https://cors.io/?',
-            setHeaders: false
-        },
-        // {
-        //     url: 'https://thingproxy.freeboard.io/fetch/',
-        //     setHeaders: false
-        // },
+        'https://cors.io/?',
+        // 'https://thingproxy.freeboard.io/fetch/'
         {
             url: 'https://cors-anywhere.herokuapp.com/',
-            setHeaders: true
+            headers: {'X-Requested-With': 'XMLHttpRequest'}
         },
-        // {
-        //     url: 'https://cors.now.sh/',
-        //     setHeaders: false
-        // }
+        // 'https://cors.now.sh/'
     ];
 
 
@@ -30,11 +21,11 @@
 
         var requestPromises = proxyList.map(function(proxy) {
 
-            var proxyUrl = proxy.url,
-                setHeaders = proxy.setHeaders,
-                url = proxyUrl + requestUrl;
+            var proxyUrl = proxy.url || proxy,
+                headers = proxy.headers,
+                finalUrl = proxyUrl + requestUrl;
 
-            return fetch(url, setHeaders ? {headers: {'X-Requested-With': 'XMLHttpRequest'}} : null);
+            return fetch(finalUrl, headers ? {headers} : null);
         });
 
         return Promise.race(requestPromises);

@@ -69,3 +69,18 @@ require(['proxied-fetch'], function(proxiedFetch){  });
 #### proxiedFetch:
 
 ![ajax request with proxiedFetch](https://raw.githubusercontent.com/Leo4815162342/proxied-fetch/master/proxiedFetch.gif)
+
+
+### providing custom Proxies
+
+`proxiedFetch` accepts a list of custom proxies
+
+```javascript
+
+var myProxies = ['']
+
+proxiedFetch('https://xkcd.com/info.0.json')
+            .then(res => res.json())
+            .then(data => console.log(data));
+
+```
