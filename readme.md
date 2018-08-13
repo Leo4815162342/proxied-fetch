@@ -1,5 +1,7 @@
 # Proxied Fetch
 
+[![NpmVersion](https://img.shields.io/npm/v/proxied-fetch.svg)](https://www.npmjs.com/package/proxied-fetch)
+
 `Proxied Fetch` is a tiny Fetch API wrapper with 0 dependencies that lets you bypass [CORS limitations](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) by simply proxy-ing your requests through known CORS proxy services.
 
 Tired of seeing these error messages after requesting content from domains with different origin?
